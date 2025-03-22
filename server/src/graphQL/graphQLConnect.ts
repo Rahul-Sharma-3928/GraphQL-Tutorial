@@ -10,7 +10,10 @@ export const graphQLConnect = async () => {
     resolvers: graphQLResolvers,
   });
 
-  // Start the server
+  // await server.start();
+  // return server;
+
+  // Start the server then use only graphql server
   startStandaloneServer(server, {
     listen: {
       port: Number(process.env.APOLLO_PORT),

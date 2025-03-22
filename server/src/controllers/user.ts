@@ -7,9 +7,9 @@ export const userData = async () => {
 
 export const createUser = async () => {
   let user = await User.create({
-    id: "1000",
+    id: "101",
     name: "don Doe",
-    email: "don@gmail.com",
+    email: "don123@gmail.com",
     password: "password",
     createdAt: "2021-09-09T12:00:00Z",
     updatedAt: "2021-09-09T12:00:00Z",
