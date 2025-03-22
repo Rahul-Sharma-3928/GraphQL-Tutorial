@@ -1,14 +1,10 @@
 import mongoose from "mongoose";
 
-export const connectDB = (uri: string) => {
-  mongoose
-    .connect(uri, {
-      dbName: "graphql-tutorial",
-    })
-    .then((d) =>
-      console.log(
-        `Connected with database name ${d.connection.name} to MongoDB on ${d.connection.host}:${d.connection.port}`
-      )
-    )
-    .catch((e) => console.log(e));
+export const connectDB = async (uri: string) => {
+  const database = await mongoose.connect(uri, {
+    dbName: "graphql-tutorial",
+  });
+  console.log(
+    `Connected with database name ${database.connection.name} to MongoDB on ${database.connection.host}:${database.connection.port}`
+  );
 };

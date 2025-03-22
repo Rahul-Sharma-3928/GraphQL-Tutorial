@@ -1,4 +1,4 @@
-export const schema = `#graphql
+export const graphQLschema = `#graphql
 
 type User {
     id: ID!
@@ -13,5 +13,6 @@ type User {
 type Query {
    hello: String!
    getUserData:User!
+   createUser:User!
 }
 `;

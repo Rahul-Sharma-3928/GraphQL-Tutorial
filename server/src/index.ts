@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import { connectDB } from "./database/database.js";
+import { graphQLConnect } from "./graphQL/graphQLConnect.js";
 
 const app = express();
 
@@ -11,6 +12,9 @@ dotenv.config({
 
 //Database connection
 connectDB(process.env.MONGO_URI!);
+
+//GraphQL connection
+graphQLConnect();
 
 app.get("/", (req, res) => {
   res.send("Hello World rah!");
